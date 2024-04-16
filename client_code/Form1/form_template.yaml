@@ -7,7 +7,21 @@ components:
   properties: {col_widths: '{}'}
   name: content_panel
   layout_properties: {slot: default}
-  components: []
+  components:
+  - name: input_data
+    properties: {icon: 'fa:upload', visible: true, tooltip: ''}
+    type: FileLoader
+    layout_properties: {grid_position: 'QHTVBX,JFNYZQ'}
+    event_bindings: {change: input_data_change}
+  - name: run_code
+    properties: {text: Run Code, role: outlined-button}
+    type: Button
+    layout_properties: {grid_position: 'TKRAUD,LXBIIU', full_width_row: false}
+    event_bindings: {click: run_code_click}
+  - name: file_loader_2
+    properties: {text: Download}
+    type: FileLoader
+    layout_properties: {grid_position: 'MOETTP,WFNIQL'}
 - type: FlowPanel
   properties: {}
   name: navbar_links

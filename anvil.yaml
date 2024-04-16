@@ -1,12 +1,16 @@
-allow_embedding: false
-package_name: Clustering_App
-name: Clustering App
-startup_form: Form1
-renamed: true
-runtime_options: {version: 2, client_version: '3', server_version: python3-sandbox,
-  server_spec: null}
 dependencies: []
 services:
 - source: /runtime/services/tables.yml
   client_config: {}
   server_config: {}
+package_name: Clustering_App
+allow_embedding: false
+name: Clustering App
+runtime_options:
+  version: 2
+  client_version: '3'
+  server_version: python3-sandbox
+  server_spec: {base: python310-minimal}
+startup_form: Form1
+uplink_visible: true
+renamed: true
