@@ -11,5 +11,8 @@ class Form1(Form1Template):
 
   def run_code_click(self, **event_args):
     """This method is called when the button is clicked"""
-    anvil.server.call('func', self.input_data)
+    contents = self.input_data.file
+    print("contents", contents)
+    print("self.input_data.file.name", self.input_data.file.name)
+    anvil.server.call('func', self.input_data.file.name, contents)
     pass
