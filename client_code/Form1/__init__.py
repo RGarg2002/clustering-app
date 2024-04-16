@@ -15,5 +15,8 @@ class Form1(Form1Template):
   def run_code_click(self, **event_args):
     """This method is called when the button is clicked"""
     result = anvil.server.call('func', self.input_data.file.name, self.input_data.file)
-    print("result", result)
+
+    csv_file = anvil.BlobMedia('text/plain', result.encode('utf-8'), name='Your Keywords Clustered.csv')
+    anvil.media.download(csv_file)
+    
     pass

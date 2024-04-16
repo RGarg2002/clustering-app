@@ -18,11 +18,11 @@ components:
     type: Button
     layout_properties: {grid_position: 'TKRAUD,LXBIIU', full_width_row: false}
     event_bindings: {click: run_code_click}
-  - name: file_loader_2
-    properties: {text: Download}
-    type: FileLoader
-    layout_properties: {grid_position: 'MOETTP,WFNIQL'}
 - type: FlowPanel
   properties: {}
   name: navbar_links
   layout_properties: {slot: nav-right}
+- name: label_1
+  properties: {text: Semantic Clustering}
+  type: Label
+  layout_properties: {slot: title}
